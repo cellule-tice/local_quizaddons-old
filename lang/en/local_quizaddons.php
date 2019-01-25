@@ -17,7 +17,7 @@
 /**
  * Plugin strings are defined here.
  *
- * @package     local_quiz
+ * @package     local_quizaddons
  * @category    string
  * @author      Jean-Roch Meurisse
  * @copyright   2018 - Cellule TICE - University of Namur

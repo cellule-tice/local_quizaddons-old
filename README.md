@@ -1,11 +1,11 @@
 # Quiz addons #
 
 Lightweight local plugin that offers extended functionality to core quiz module.
-For now, it just enables student notification on manual grading of essay questions.
+For now, it just enables student notification when all essay questions in a quiz have been manually graded.
 
 ## License ##
 
-Copyright (C) 2018 onwards University of Namur - Cellule TICE
+2018 Copyright (C) 2018 onwards University of Namur - Cellule TICE
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software

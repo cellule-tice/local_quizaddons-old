@@ -17,7 +17,7 @@
 /**
  * Plugin observer classes are defined here.
  *
- * @package     local_quiz
+ * @package     local_quizaddons
  * @category    event
  * @author      Jean-Roch Meurisse
  * @copyright   2018 - Cellule TICE - University of Namur
@@ -29,11 +29,11 @@ defined('MOODLE_INTERNAL') || die();
 /**
  * Event observer class.
  *
- * @package    local_quiz
+ * @package    local_quizaddons
  * @copyright  2018 Jean-Roch Meurisse <jean-roch.meurisse@unamur.be>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class local_quiz_observer {
+class local_quizaddons_observer {
 
     /**
      * Triggered via $event.
@@ -57,9 +57,9 @@ class local_quiz_observer {
             $stringparams->courseshortname = $COURSE->shortname;
             $stringparams->userfullname = fullname($user);
             $stringparams->url = $CFG->wwwroot . '/mod/quiz/view.php?id=' . $data['contextinstanceid'];
-            $msg = get_string('gradereceived', 'local_quiz', $stringparams);
+            $msg = get_string('gradereceived', 'local_quizaddons', $stringparams);
             $message = new \core\message\message();
-            $message->component = 'local_quiz';
+            $message->component = 'local_quizaddons';
             $message->name = 'manually_graded';
             $message->userfrom = get_admin();
             $message->userto = $user;
@@ -70,7 +70,7 @@ class local_quiz_observer {
             $message->smallmessage = '';
             $message->notification = '1';
             $message->contexturl = $stringparams->url;
-            $message->contexturlname = get_string('viewmygrade', 'local_quiz');
+            $message->contexturlname = get_string('viewmygrade', 'local_quizaddons');
             $message->courseid = $COURSE->id;
             $message->replyto = "";
 

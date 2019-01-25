@@ -17,7 +17,7 @@
 /**
  * Plugin event observers are registered here.
  *
- * @package     local_quiz
+ * @package     local_quizaddons
  * @category    event
  * @author      Jean-Roch Meurisse
  * @copyright   2018 - Cellule TICE - University of Namur
@@ -30,6 +30,6 @@ $observers = array(
 
     array(
         'eventname' => 'mod_quiz\event\question_manually_graded',
-        'callback' => 'local_quiz_observer::question_manually_graded',
+        'callback' => 'local_quizaddons_observer::question_manually_graded',
     ),
 );

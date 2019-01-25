@@ -17,7 +17,7 @@
 /**
  * Plugin version and other meta-data are defined here.
  *
- * @package     local_quiz
+ * @package     local_quizaddons
  * @author      Jean-Roch Meurisse
  * @copyright   2018 - Cellule TICE - University of Namur
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -25,8 +25,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'local_quiz';
-$plugin->release = '0.1.0';
-$plugin->version = 2018112106;
+$plugin->component = 'local_quizaddons';
+$plugin->release = '3.6';
+$plugin->version = 2019012600;
 $plugin->requires = 2018051700;
 $plugin->maturity = MATURITY_STABLE;
