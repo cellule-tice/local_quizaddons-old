@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_quizaddons';
-$plugin->release = '3.6';
-$plugin->version = 2019012600;
+$plugin->release = '3.7';
+$plugin->version = 2019060300;
 $plugin->requires = 2018051700;
 $plugin->maturity = MATURITY_STABLE;
