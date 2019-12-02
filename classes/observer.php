@@ -45,12 +45,12 @@ class local_quizaddons_observer {
 
         global $DB, $CFG, $COURSE;
         $data = $event->get_data();
+        $usergraded = $DB->get_field('quiz_attempts', 'userid', array('id' => $data['other']['attemptid']));
         $quiz = $DB->get_record('quiz', array('id' => $data['other']['quizid']));
-        if ($DB->record_exists('quiz_grades', array('quiz' => $quiz->id))) {
+        if ($DB->record_exists('quiz_grades', array('quiz' => $quiz->id, 'userid' => $usergraded))) {
 
             $quizname = $DB->get_field('quiz', 'name', array('id' => $data['other']['quizid']));
-            $userid = $DB->get_field('quiz_attempts', 'userid', array('id' => $data['other']['attemptid']));
-            $user = $DB->get_record('user', array('id' => $userid));
+            $user = $DB->get_record('user', array('id' => $usergraded));
             $stringparams = new stdClass();
             $stringparams->quiz = $quizname;
             $stringparams->coursename = $COURSE->fullname;
